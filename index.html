@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Notes Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>College Notes Organizer</h1>
+    </header>
+    <main>
+        <section class="semester-section">
+            <h2>Semesters</h2>
+            <div id="semesters" class="grid-container"></div>
+        </section>
+
+        <section class="notes-section" id="notesSection" style="display: none;">
+            <button id="backButton" class="back-btn">Back</button>
+            <h2 id="notesHeader"></h2>
+            <div id="notesContainer" class="grid-container"></div>
+        </section>
+    </main>
+
+    <div class="floating-action-btn">
+        <button id="addNoteBtn">+</button>
+    </div>
+
+    <footer>
+        <p>Developed by Sailendra Bhattarai</p>
+    </footer>
+
+    <div id="addNoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add Note</h3>
+            <form id="addNoteForm">
+                <label for="semester">Select Semester:</label>
+                <select id="semester" required>
+                    <option value="" disabled selected>Select Semester</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <label for="subject">Enter Subject:</label>
+                <input type="text" id="subject" placeholder="Enter Subject" required>
+                <label for="noteFile">Upload Note:</label>
+                <input type="file" id="noteFile" accept=".pdf, .doc, .docx" required>
+                <button type="submit">Add Note</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
